@@ -41,3 +41,19 @@ This work is published under [MIT][mit] License.
 [chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
 [CD]: https://en.wikipedia.org/wiki/Continuous_deployment
 [mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+
+## Guides
+### 도커 환경 실행
+vscode에서 ```ctrl+shift+p``` -> ```Dev Containers: Open Folder in Container...```
+### jekyll-compose 설정
+1. Gemfile에 ```gem 'jekyll-compose', group: [:jekyll_plugins]``` 추가
+2. ```bundle``` 명령어 실행
+### 새로운 포스트 생성 및 카테고리 설정
+1. ```bundle exec jekyll compose "Title"```로 새 포스트 생성
+2. _posts 폴더에 생성된 파일에 포스트 내용물 작성
+    > category: [TOP_CATEGORY] // TOP_CATEGORY 대분류 안에 속함  
+    > category: [TOP_CATEGORY, SUB_CATEGORY] // AAA 대분류, BBB 소분류 안에 속함
+    > tags: [tag1, tag2] // tag는 소문자만 가능하다고 함
+### 로컬 서버 실행해보기
+1. ```bundle exec jekyll serve``` 명령어 실행
+2. http://127.0.0.1:4000/ 접속
